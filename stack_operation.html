@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+    <html lang="">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VirtualLab</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+   <script src="https://www.promisejs.org/polyfills/promise-done-7.0.4.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+        
+ <script type="text/javascript">
+
+            $(document).ready(function()
+                                                      
+        {
+
+                            var counter = 10; //it will store the number of operator+1 
+
+                            while(counter>=1) 
+                            {
+            
+                           var newTextBoxDiv = $(document.createElement('div')).attr("id", 'TextBoxDiv' + counter);
+//name="textbox' + counter + '"
+                             newTextBoxDiv.after().html('<input type="text" name="' + counter + '" id="' + counter + '" value="" >');
+
+                            newTextBoxDiv.appendTo("#TextBoxesGroup");
+                            counter--;
+                                                                
+                            }});
+
+                          
+    </script>        
+    
+    <style>
+
+    .verticalNav 
+    {        
+        list-style-type: none;
+
+        padding: 0;
+
+        width: 20%;
+        background-color: #2799FA;
+        position: fixed;
+        height: 100%;
+        overflow: auto;
+    }
+
+    .verticalNavA 
+    {
+        margin-top: 20px ;
+        display: block;
+        padding-top: 10px ;
+        vertical-align: top;
+        text-decoration: none;
+        border-bottom: 1px solid #fff;
+        width: 340% ;
+        margin-right:auto ;
+        text-align: left ;
+    }
+
+
+
+    body  
+    {
+        margin: 0 ;
+    }   
+
+    .img-with-text 
+    {
+        text-align: justify ;
+        width: 50px ;
+    }
+
+    .img-with-text img 
+    {
+        display: block ;
+        margin:0 auto ;
+        padding-left: 55px ;
+        padding-bottom: 40px ;
+        text-align: center ;
+        padding-top: 25px ;
+
+
+    }
+
+
+    .img-with-text a 
+    {
+
+        padding-left: 100% ;
+        color: white ;
+
+    }
+
+    .img-with-text a:hover
+    {
+
+        background-color: white ;
+        color: black ;
+
+
+    }
+
+    ul 
+    {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden ;
+        background-color: #2799FA ;
+
+    }
+
+
+    li 
+    {
+
+        float:right ;
+
+    }
+
+
+    li a 
+    {
+        display:inline-block;
+
+        color:white ;
+        text-align: center ;
+        padding:20px 25px ;
+        text-decoration: none ;
+        font-size: 12px ;
+    }
+
+
+    li a:hover
+    {
+        background-color: white ;
+        color: black ;
+    }
+
+
+
+
+    h4 
+    {
+        padding-left: 300px ;
+        font-weight: 100;
+       
+        font-size: 30px ;
+        margin-right: 0;
+        padding-top: 50px ;
+    }
+
+    p 
+    {
+        padding-left: 300px ;
+        font-size: 20px ;
+    }
+
+
+    input[type=text],input[type=textBox] 
+    {
+
+
+        padding-left: 5px ;                
+        padding: 10px 20px;
+        margin-left: 300px ;
+        box-sizing: border-box;
+        border: 2px solid #2799FA ;
+        border-radius: 4px;
+
+    }
+
+    .b
+    {
+
+
+        padding-left: 5px ;                
+       
+        margin-left: 300px ;
+        border-radius: 4px;
+
+    }
+        
+         .horizontalNav {
+         
+          position: fixed;
+         top: 0;
+         width: 100%;
+             z-index: 500;
+            
+        }
+        
+        #stac{
+           
+            box-sizing: border-box;
+            white-space: pre-line;
+            width: 80% ;
+         
+        }
+         .work2 {
+             background-color: #2799FA; /* Green */
+             border: none;
+             color: white;
+             padding: 10px 25px;
+            text-align: center;
+            font-size: 16px;
+             border-radius: 2px ;
+        } 
+        .work2:hover{
+            background-color: #0f89f2 ;
+             
+        }
+        
+         .mybody {
+            width:100% ;
+           
+        }
+        .infix_div {
+              
+              display: inline-block;
+              position: absolute;
+              left: 0;
+            
+            
+        }
+        
+         #TextBoxesGroup{
+           display: inline-block;
+            position: absolute;
+            border: none ;
+            right: 0;
+            width: 55%;
+            height: 100% ; 
+          
+          
+        }
+        
+
+    </style>
+
+
+    </head>
+
+    <body>
+
+        <ul class="horizontalNav">
+             <div class="img-with-textHH"> 
+                    <li><a class="horizontalNavA" href="default.asp">FEED</a></li>
+                    <li><a class="horizontalNavA" href="news.asp">AUTHORS</a></li>
+                    <li><a class="horizontalNavA" href="contact.asp">EXPLORE</a></li>
+                    <li><a class="horizontalNavA" href="about.asp">BLOG</a></li>
+                    <li><a class="horizontalNavA" href="about.asp">CONTACT</a></li>
+                   
+            </div>
+        </ul>
+
+
+        <ul class="verticalNav">
+            <div class="img-with-text"> 
+
+                <img src="CMRLOGI.jpg" width="125px" height="125px"> 
+                <li><a class="verticalNavA" >HOME</a></li>
+                <li><a class="verticalNavA">CODE</a></li>
+                <li><a class="verticalNavA">EXPERIMENT</a></li>
+            </div>
+
+        </ul>
+
+
+        <div class="mybody">
+
+            <h4> Stack Operation </h4>
+
+            <div class="infix_div">
+            
+            <form method="post" >
+                <p>Enter the element to push : </p>
+                <input id="push" type="text"  name="push" required >
+                
+                <button type="button" class='work2' onclick="mypush()" >Push</button>
+                
+                <p> The element popped is : </p>
+                <input id="pop" type="text"  name="number" required >
+                <button type="button" class='work2' onclick="mypop()"  >Pop</button>
+               
+                
+           </form>
+
+                </div>
+   <div id='TextBoxesGroup'>
+                <div id="TextBoxDiv1">
+                <p>  Stack </p>
+              
+                </div>
+         
+            
+    </div>
+
+
+<script>
+   
+    var counter=0 ;
+    function mypush()
+    {
+        var  ch = (document.getElementById("push").value); 
+          if(ch.length<=0){
+                alert("input cannot be empty ") ;
+                    e.preventDefault();
+                }
+        else{
+            if(counter==10){
+                alert("OVERFLOW ! no more element can be added on the stack") ;
+                e.preventDefault();
+            }
+                   
+        
+        counter=counter+1 ;
+          
+        ID=counter.toString() ; 
+        document.getElementById(ID).value=ch;
+        document.getElementById("push").value="";
+          
+             
+           
+         
+        }
+    }
+    
+    
+    
+    
+function mypop(){
+        
+         
+        
+        if(counter==0){
+             document.getElementById("pop").value=" ";
+            alert("UNDERFLOW ! no elements to be deleted ") ;
+        }
+        
+        else{
+           
+            
+            ID=counter.toString() ; 
+            var  x = (document.getElementById(ID).value);
+            
+           
+            document.getElementById(ID).value="" ;
+       
+           document.getElementById("pop").value=x;
+          counter=counter-1 ; 
+           
+        }
+    }    
+   
+            
+</script>
+
+            
+      
+        
+            
+             
+            
+            
+            
+            
+        
+
+
+    
+
+    
+</div>   
+              
+ 
+    
+</body>
+</html>
+
+
+
